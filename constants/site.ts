@@ -16,9 +16,8 @@ export const CONTACT = {
 } as const;
 
 export const SOCIALS = {
-  // TODO: paste your real GitHub & LinkedIn URLs here.
-  github: "https://github.com/TODO-your-github",
-  linkedin: "https://www.linkedin.com/in/TODO-your-linkedin",
+  github: "https://github.com/Jameers-code",
+  linkedin: "https://www.linkedin.com/in/jameer-ahmed-6047b3288/",
   leetcode: "https://leetcode.com/u/jameer-xxvi/",
   youtube: "https://www.youtube.com/@jameerverse_26",
 } as const;
@@ -51,8 +50,8 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "GitHub", href: SOCIALS.github, icon: Github, todo: true },
-  { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin, todo: true },
+  { label: "GitHub", href: SOCIALS.github, icon: Github },
+  { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin },
   { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2 },
   { label: "YouTube", href: SOCIALS.youtube, icon: Youtube },
   { label: "Email", href: `mailto:${CONTACT.email}`, icon: Mail, todo: true },
