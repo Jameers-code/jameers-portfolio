@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail, Code2, Sparkles } from "lucide-react";
-import { Github, Linkedin } from "@/components/shared/brand-icons";
+import { Github, Linkedin, Youtube } from "@/components/shared/brand-icons";
 import { Reveal } from "@/components/shared/reveal";
 import { RoleRotator } from "@/components/shared/role-rotator";
 import { SITE, SOCIALS, CONTACT } from "@/constants/site";
@@ -11,6 +11,7 @@ const SOCIAL_ICONS = [
   { label: "GitHub", href: SOCIALS.github, icon: Github },
   { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin },
   { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2 },
+  { label: "YouTube", href: SOCIALS.youtube, icon: Youtube },
   { label: "Email", href: `mailto:${CONTACT.email}`, icon: Mail },
 ];
 

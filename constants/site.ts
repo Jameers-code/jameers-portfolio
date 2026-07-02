@@ -1,5 +1,5 @@
 import { Mail, Code2 } from "lucide-react";
-import { Github, Linkedin } from "@/components/shared/brand-icons";
+import { Github, Linkedin, Youtube } from "@/components/shared/brand-icons";
 import type { NavItem, SocialLink } from "@/types";
 
 /**
@@ -16,10 +16,11 @@ export const CONTACT = {
 } as const;
 
 export const SOCIALS = {
-  // TODO: paste your real profile URLs here.
+  // TODO: paste your real GitHub & LinkedIn URLs here.
   github: "https://github.com/TODO-your-github",
   linkedin: "https://www.linkedin.com/in/TODO-your-linkedin",
-  leetcode: "https://leetcode.com/u/TODO-your-leetcode",
+  leetcode: "https://leetcode.com/u/jameer-xxvi/",
+  youtube: "https://www.youtube.com/@jameerverse_26",
 } as const;
 
 /** Path to the résumé placed in /public. TODO: add your real resume.pdf. */
@@ -44,6 +45,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Certifications", href: "#certifications" },
+  { label: "Swag", href: "#swag" },
   { label: "Community", href: "#community" },
   { label: "Contact", href: "#contact" },
 ];
@@ -51,6 +53,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "GitHub", href: SOCIALS.github, icon: Github, todo: true },
   { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin, todo: true },
-  { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2, todo: true },
+  { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2 },
+  { label: "YouTube", href: SOCIALS.youtube, icon: Youtube },
   { label: "Email", href: `mailto:${CONTACT.email}`, icon: Mail, todo: true },
 ];

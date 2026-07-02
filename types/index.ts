@@ -70,6 +70,17 @@ export interface Certification {
   category: "AWS" | "Google" | "Microsoft" | "Coding" | "Other";
 }
 
+export interface Swag {
+  title: string;
+  /** Where the swag/milestone came from, e.g. "AWS", "GDG". */
+  source: string;
+  image: string;
+  /** Grouping tag used for the filter chips. */
+  tag: "AWS" | "Google" | "GDG" | "Community";
+  /** Marks the hero item rendered larger in the bento grid. */
+  featured?: boolean;
+}
+
 export interface Project {
   title: string;
   description: string;

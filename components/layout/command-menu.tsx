@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FileText, Mail, Code2, Moon, Sun, Compass } from "lucide-react";
-import { Github, Linkedin } from "@/components/shared/brand-icons";
+import { Github, Linkedin, Youtube } from "@/components/shared/brand-icons";
 import {
   CommandDialog,
   CommandEmpty,
@@ -22,6 +22,7 @@ const SOCIAL_ACTIONS = [
   { label: "GitHub", href: SOCIALS.github, icon: Github },
   { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin },
   { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2 },
+  { label: "YouTube", href: SOCIALS.youtube, icon: Youtube },
 ];
 
 /** ⌘K command palette: jump to a section, open socials, toggle theme, or grab the résumé. */
