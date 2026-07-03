@@ -70,6 +70,15 @@ export interface Certification {
   category: "AWS" | "Google" | "Microsoft" | "Coding" | "Other";
 }
 
+export interface Letter {
+  title: string;
+  /** Issuing organization, e.g. "AWS", "Microsoft". */
+  source: string;
+  /** What kind of document it is, e.g. "Offer Letter", "Official Mail". */
+  kind: string;
+  image: string;
+}
+
 export interface Swag {
   title: string;
   /** Where the swag/milestone came from, e.g. "AWS", "GDG". */

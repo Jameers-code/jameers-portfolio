@@ -1,4 +1,9 @@
-import { Cloud, GraduationCap, Users, Rocket } from "lucide-react";
+import {
+  AwsLogo,
+  MicrosoftLogo,
+  GoogleLogo,
+  DevloomLogo,
+} from "@/components/shared/logos";
 import type { CommunityRole } from "@/types";
 
 export const COMMUNITY_ROLES: CommunityRole[] = [
@@ -7,7 +12,7 @@ export const COMMUNITY_ROLES: CommunityRole[] = [
     role: "Founding Lead",
     description:
       "Brought a global cloud community to campus for the first time and onboarded students onto the official AWS Builder platform.",
-    icon: Cloud,
+    icon: AwsLogo,
     highlights: ["Founding lead", "AWS Builder onboarding", "Cloud workshops"],
   },
   {
@@ -15,7 +20,7 @@ export const COMMUNITY_ROLES: CommunityRole[] = [
     role: "Learn Student Ambassador",
     description:
       "Organizing events and collaborating with industry professionals to grow the developer community on campus.",
-    icon: Rocket,
+    icon: MicrosoftLogo,
     highlights: ["Event leadership", "Community growth", "Industry collaboration"],
   },
   {
@@ -23,7 +28,7 @@ export const COMMUNITY_ROLES: CommunityRole[] = [
     role: "Study Jams Mentor",
     description:
       "Mentored peers through Google Cloud Study Jams to a Top 2 national ranking across India.",
-    icon: GraduationCap,
+    icon: GoogleLogo,
     highlights: ["Top 2 in India", "Cloud mentoring", "DevFest participation"],
   },
   {
@@ -31,7 +36,7 @@ export const COMMUNITY_ROLES: CommunityRole[] = [
     role: "Product Contributor",
     description:
       "Collaborating on product initiatives and contributing to open, community-driven development.",
-    icon: Users,
+    icon: DevloomLogo,
     highlights: ["Product contribution", "Collaboration", "Open source"],
   },
 ];

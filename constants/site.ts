@@ -9,8 +9,7 @@ import type { NavItem, SocialLink } from "@/types";
  * real URLs/handle and delete the `todo` flag on the matching social link.
  */
 export const CONTACT = {
-  /** TODO: replace with your real public email address. */
-  email: "TODO-your-email@example.com",
+  email: "jameer.xxvi@gmail.com",
   location: "India",
   availability: "Open to Product Engineer / SDE roles & internships",
 } as const;
@@ -44,6 +43,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Certifications", href: "#certifications" },
+  { label: "Letters", href: "#letters" },
   { label: "Swag", href: "#swag" },
   { label: "Community", href: "#community" },
   { label: "Contact", href: "#contact" },
@@ -54,5 +54,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: "LinkedIn", href: SOCIALS.linkedin, icon: Linkedin },
   { label: "LeetCode", href: SOCIALS.leetcode, icon: Code2 },
   { label: "YouTube", href: SOCIALS.youtube, icon: Youtube },
-  { label: "Email", href: `mailto:${CONTACT.email}`, icon: Mail, todo: true },
+  { label: "Email", href: `mailto:${CONTACT.email}`, icon: Mail },
 ];

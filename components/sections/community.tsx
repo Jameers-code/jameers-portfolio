@@ -20,8 +20,8 @@ export function Community() {
             <Reveal key={role.organization} delay={i * 80}>
               <SpotlightCard className="flex h-full flex-col gap-4 p-6 sm:p-7">
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand-muted text-brand">
-                    <role.icon className="size-6" />
+                  <span className="inline-flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-xl ring-1 ring-black/[0.06] shadow-sm dark:ring-white/10">
+                    <role.icon className="size-full" />
                   </span>
                   <div>
                     <h3 className="text-lg font-semibold tracking-tight">

@@ -232,16 +232,21 @@
     opacity: 1;
   }
 
+  /* Seamless marquee: two identical groups each shift their full width + one
+     gap, so the second group lands exactly where the first began. */
   @keyframes marquee {
     from {
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(calc(-100% - var(--marquee-gap, 1rem)));
     }
   }
   .animate-marquee {
     animation: marquee var(--marquee-duration, 40s) linear infinite;
+  }
+  .group\/marquee:hover .animate-marquee {
+    animation-play-state: paused;
   }
 
   @keyframes float-slow {
