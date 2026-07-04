@@ -101,20 +101,25 @@ export function Hero({ profile }: { profile: Profile }) {
         </div>
 
         <Reveal delay={200} className="justify-self-center md:justify-self-end">
-          <div className="relative animate-float-slow">
+          <div className="relative">
+            {/* Ambient glow */}
             <div
               aria-hidden
-              className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-brand/30 via-transparent to-accent-blue/20 blur-2xl"
+              className="absolute -inset-6 -z-10 rounded-[2.75rem] bg-gradient-to-br from-brand/25 via-transparent to-accent-blue/20 blur-3xl"
             />
-            <div className="relative aspect-[4/5] w-60 overflow-hidden rounded-[2rem] border border-border/70 bg-card/60 shadow-xl sm:w-72">
-              <Image
-                src="/images/jameer.jpg"
-                alt={profile.name}
-                fill
-                priority
-                sizes="(max-width: 768px) 240px, 288px"
-                className="object-cover"
-              />
+
+            {/* Gradient-framed portrait */}
+            <div className="animate-float-slow relative rounded-[2.25rem] bg-gradient-to-br from-brand/50 via-border to-accent-blue/40 p-[1.5px] shadow-2xl shadow-brand/10">
+              <div className="relative aspect-[4/5] w-72 overflow-hidden rounded-[calc(2.25rem-1.5px)] bg-card sm:w-80 lg:w-[21rem]">
+                <Image
+                  src="/images/jameer.jpg"
+                  alt={profile.name}
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 336px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </Reveal>

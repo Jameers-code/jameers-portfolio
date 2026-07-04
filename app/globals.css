@@ -249,6 +249,34 @@
     animation-play-state: paused;
   }
 
+  /* Rotating role text: vertical roll in / out. */
+  @keyframes role-in {
+    from {
+      transform: translateY(112%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes role-out {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-112%);
+      opacity: 0;
+    }
+  }
+  .animate-role-in {
+    animation: role-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .animate-role-out {
+    animation: role-out 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   @keyframes float-slow {
     0%,
     100% {
@@ -273,7 +301,9 @@
     transition: none !important;
   }
   .animate-marquee,
-  .animate-float-slow {
+  .animate-float-slow,
+  .animate-role-in,
+  .animate-role-out {
     animation: none !important;
   }
 }

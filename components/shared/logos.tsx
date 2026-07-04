@@ -82,19 +82,30 @@ export const GoogleLogo = ((props: IconProps) => (
   </svg>
 )) as unknown as LucideIcon;
 
-/** DevLoom — branded monogram (placeholder for official logo). */
+/** DevLoom — purple hexagon mark. */
 export const DevloomLogo = ((props: IconProps) => (
   <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" {...props}>
     <defs>
       <linearGradient id="devloom-grad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="#FF9900" />
-        <stop offset="1" stopColor="#3B82F6" />
+        <stop offset="0" stopColor="#7C3AED" />
+        <stop offset="1" stopColor="#C084FC" />
       </linearGradient>
     </defs>
     <rect width="24" height="24" fill="url(#devloom-grad)" />
+    {/* Outer hexagon */}
     <path
-      d="M8 6.5h3.4c3 0 5.1 2.2 5.1 5.5S14.4 17.5 11.4 17.5H8v-11zm2.4 2.1v6.8h.9c1.7 0 2.8-1.3 2.8-3.4s-1.1-3.4-2.8-3.4h-.9z"
+      d="M12 4.6l6.4 3.7v7.4L12 19.4l-6.4-3.7V8.3z"
+      fill="none"
+      stroke="#fff"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+      opacity="0.9"
+    />
+    {/* Inner hexagon */}
+    <path
+      d="M12 9l3.1 1.8v3.4L12 16l-3.1-1.8v-3.4z"
       fill="#fff"
+      opacity="0.95"
     />
   </svg>
 )) as unknown as LucideIcon;
