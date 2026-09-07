@@ -85,7 +85,7 @@ export interface Swag {
   source: string;
   image: string;
   /** Grouping tag used for the filter chips. */
-  tag: "AWS" | "Google" | "GDG" | "Community";
+  tag: "AWS" | "Google" | "GDG" | "Community" | "Microsoft";
   /** Marks the hero item rendered larger in the bento grid. */
   featured?: boolean;
 }

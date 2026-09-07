@@ -78,6 +78,12 @@ export const SWAGS: Swag[] = [
     image: "/swags/community-moment-3.jpg",
     tag: "Community",
   },
+  {
+    title: "Microsoft Swag",
+    source: "Microsoft",
+    image: "/swags/microsoft-swag.jpg",
+    tag: "Microsoft",
+  },
 ];
 
-export const SWAG_TAGS = ["All", "AWS", "Google", "GDG", "Community"] as const;
+export const SWAG_TAGS = ["All", "AWS", "Google", "GDG", "Community", "Microsoft"] as const;
