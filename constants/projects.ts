@@ -24,10 +24,10 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/Jameers-code/mindwell",
   },
   {
-    title: "Portfolio",
+    title: "Jameer's Portfolio",
     description:
-      "Earlier portfolio version — simple, lightweight, and focused on presenting work cleanly.",
-    tags: ["HTML", "CSS", "Portfolio"],
-    githubUrl: "https://github.com/Jameers-code/portfolio",
+      "Current personal portfolio — community leadership, certifications, swag gallery, and projects. Built with Next.js, TypeScript, Tailwind v4, and shadcn/ui.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Portfolio"],
+    githubUrl: "https://github.com/Jameers-code/jameers-portfolio",
   },
 ];
