@@ -20,8 +20,8 @@ These experiences have strengthened my leadership, collaboration, and problem-so
 
 ## Skills
 
-**Languages:** C++, (add more)
+**Languages:** C++, Python, JavaScript, HTML/CSS
 
 **DSA:** Arrays, Strings, HashMap, Heap, Two pointers, Backtracking, Graphs, Trees
 
-**Tools:** Git, (add more)
+**Tools:** Git, GitHub, VS Code, AWS Console
