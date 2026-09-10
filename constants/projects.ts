@@ -1,38 +1,33 @@
 import { SOCIALS } from "@/constants/site";
 import type { Project } from "@/types";
 
-/**
- * PLACEHOLDER PROJECTS.
- *
- * TODO: replace each entry with a real project — update title, description,
- * tags, githubUrl and liveUrl, then remove the `todo` flag. The first item is
- * rendered as the large "featured" card.
- */
 export const PROJECTS: Project[] = [
   {
-    title: "Cloud-Native AI Assistant",
+    title: "MockMind",
     description:
-      "A serverless assistant that turns natural-language prompts into cloud actions — built to explore the Full Stack + AI + Cloud intersection. Replace this with your flagship build.",
-    tags: ["Next.js", "AWS Lambda", "TypeScript", "LLM"],
-    githubUrl: SOCIALS.github,
-    liveUrl: undefined,
-    featured: true,
-    todo: true,
+      "AI-powered mock interview platform. Generates personalized questions from your resume, evaluates answers in real time, and produces a performance report — powered by Groq LLaMA 3.1.",
+    tags: ["Next.js", "Groq", "LLaMA 3.1", "TypeScript"],
+    githubUrl: "https://github.com/Jameers-code/mockmind",
   },
   {
-    title: "DSA Visualizer",
+    title: "Formix",
     description:
-      "An interactive tool to visualize the algorithms behind arrays, graphs and trees — the concepts you practice daily on LeetCode, made tangible.",
-    tags: ["React", "Algorithms", "Canvas"],
-    githubUrl: SOCIALS.github,
-    todo: true,
+      "Easy-to-use form builder for teams. Create custom forms, add smart conditional rules, and collect files like photos and videos in one place.",
+    tags: ["Next.js", "TypeScript", "Forms"],
+    githubUrl: "https://github.com/Jameers-code/formix",
   },
   {
-    title: "Community Events Platform",
+    title: "MindWell",
     description:
-      "A platform to run and track community study jams, workshops and RSVPs — inspired by leading AWS & GDG programs on campus.",
-    tags: ["Next.js", "PostgreSQL", "Tailwind"],
-    githubUrl: SOCIALS.github,
-    todo: true,
+      "AI-powered mental health web app with LLM-driven assistance. Built with Next.js, Node.js, PostgreSQL, Prisma, and AWS.",
+    tags: ["Next.js", "PostgreSQL", "AWS", "LLM"],
+    githubUrl: "https://github.com/Jameers-code/mindwell",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Earlier portfolio version — simple, lightweight, and focused on presenting work cleanly.",
+    tags: ["HTML", "CSS", "Portfolio"],
+    githubUrl: "https://github.com/Jameers-code/portfolio",
   },
 ];
