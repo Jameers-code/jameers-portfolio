@@ -97,6 +97,5 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   featured?: boolean;
-  /** True while the project is a placeholder awaiting real content. */
-  todo?: boolean;
+  image?: string;
 }

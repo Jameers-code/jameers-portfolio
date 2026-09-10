@@ -1,4 +1,4 @@
-import { ArrowUpRight, Star, Wrench } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import { Github } from "@/components/shared/brand-icons";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { SpotlightCard } from "@/components/shared/spotlight-card";
@@ -6,16 +6,6 @@ import { Reveal } from "@/components/shared/reveal";
 import { PROJECTS } from "@/constants/projects";
 import type { Project } from "@/types";
 import { cn } from "@/lib/utils";
-
-/** Small badge marking placeholder content the owner should replace. */
-function TodoBadge() {
-  return (
-    <span className="inline-flex items-center gap-1 rounded-full border border-dashed border-amber-500/50 bg-amber-500/10 px-2 py-0.5 text-[11px] font-medium text-amber-600 dark:text-amber-400">
-      <Wrench className="size-3" />
-      Placeholder
-    </span>
-  );
-}
 
 function TagList({ tags }: { tags: string[] }) {
   return (
@@ -56,7 +46,6 @@ function ProjectLinks({ project }: { project: Project }) {
         </a>
       ) : (
         <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-border/70 px-4 py-2 text-sm font-medium text-muted-foreground/70">
-          {/* TODO: add liveUrl in constants/projects.ts */}
           Demo soon
         </span>
       )}
@@ -64,8 +53,26 @@ function ProjectLinks({ project }: { project: Project }) {
   );
 }
 
-/** Decorative gradient panel standing in for a project screenshot. */
-function ProjectVisual({ title, className }: { title: string; className?: string }) {
+function ProjectVisual({ title, image, className }: { title: string; image?: string; className?: string }) {
+  if (image) {
+    return (
+      <div
+        aria-hidden
+        className={cn(
+          "relative overflow-hidden rounded-xl border border-border/70 bg-line-grid",
+          className,
+        )}
+      >
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       aria-hidden
@@ -112,7 +119,6 @@ export function Projects() {
                       <Star className="size-3" />
                       Featured
                     </span>
-                    {featured.todo && <TodoBadge />}
                   </div>
                   <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                     {featured.title}
@@ -127,6 +133,7 @@ export function Projects() {
                 </div>
                 <ProjectVisual
                   title={featured.title}
+                  image={featured.image}
                   className="order-first aspect-video lg:order-last lg:h-full"
                 />
               </SpotlightCard>
@@ -137,12 +144,11 @@ export function Projects() {
             {rest.map((project, i) => (
               <Reveal key={project.title} delay={i * 80}>
                 <SpotlightCard className="flex h-full flex-col gap-4 p-6">
-                  <ProjectVisual title={project.title} className="aspect-video" />
+                  <ProjectVisual title={project.title} image={project.image} className="aspect-video" />
                   <div className="flex items-center gap-2">
                     <h3 className="text-lg font-semibold tracking-tight">
                       {project.title}
                     </h3>
-                    {project.todo && <TodoBadge />}
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {project.description}
