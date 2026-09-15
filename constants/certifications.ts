@@ -6,6 +6,20 @@ import type { Certification } from "@/types";
  */
 export const CERTIFICATIONS: Certification[] = [
   {
+    title: "AWS Student Builder Group — Leader",
+    issuer: "Amazon Web Services",
+    image: "/certificates/aws-student-builder-leader.png",
+    category: "AWS",
+    fit: "contain",
+  },
+  {
+    title: "AWS Student Builder Group — Spark",
+    issuer: "Amazon Web Services",
+    image: "/certificates/aws-student-builder-spark.png",
+    category: "AWS",
+    fit: "contain",
+  },
+  {
     title: "AWS Cloud Practitioner Essentials",
     issuer: "Amazon Web Services",
     image: "/certificates/aws-cloud-essentials.jpg",

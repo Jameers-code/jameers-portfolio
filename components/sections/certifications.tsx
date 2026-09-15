@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Marquee } from "@/components/shared/marquee";
 import { CERTIFICATIONS } from "@/constants/certifications";
 import type { Certification } from "@/types";
 
 function CertCard({ cert }: { cert: Certification }) {
+  const isContain = cert.fit === "contain";
+
   return (
     <figure className="group/card relative w-[240px] shrink-0 overflow-hidden rounded-2xl border border-border/70 bg-card/50 sm:w-[280px]">
       <div className="relative aspect-[4/3] overflow-hidden bg-muted/40">
@@ -15,7 +18,10 @@ function CertCard({ cert }: { cert: Certification }) {
           fill
           loading="lazy"
           sizes="280px"
-          className="object-cover transition-transform duration-500 group-hover/card:scale-105"
+          className={cn(
+            isContain ? "object-contain p-2" : "object-cover",
+            "transition-transform duration-500 group-hover/card:scale-105",
+          )}
         />
         <span className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-background/85 px-2 py-0.5 text-[10px] font-medium text-brand backdrop-blur-sm">
           <BadgeCheck className="size-3" />
@@ -34,9 +40,8 @@ function CertCard({ cert }: { cert: Certification }) {
 
 /** Certifications: two counter-scrolling marquee rows of earned credentials. */
 export function Certifications() {
-  const mid = Math.ceil(CERTIFICATIONS.length / 2);
-  const rowOne = CERTIFICATIONS.slice(0, mid);
-  const rowTwo = CERTIFICATIONS.slice(mid);
+  const rowOne = CERTIFICATIONS.filter((_, i) => i % 2 === 0);
+  const rowTwo = CERTIFICATIONS.filter((_, i) => i % 2 !== 0);
 
   return (
     <section

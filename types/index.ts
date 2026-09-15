@@ -68,6 +68,7 @@ export interface Certification {
   issuer: string;
   image: string;
   category: "AWS" | "Google" | "Microsoft" | "Coding" | "Other";
+  fit?: "cover" | "contain";
 }
 
 export interface Letter {
